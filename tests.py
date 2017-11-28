@@ -1,10 +1,10 @@
 from unittest import TestCase
-from main import tokenize, read_from_tokens, parse, eval
+from parser import tokenize, parse, read_from_tokens
+from eval import eval, create_env
 
 class Test(TestCase):
 
     def setUp(self):
-
         self.test_string =  "(+ 1 2)"
 
     def test_tokenize(self):
@@ -30,8 +30,21 @@ class Test(TestCase):
         # test single
         self.assertEqual(parse("3"), 3)
 
-        #
+
+    def lots_of_tests(self):
+
+        def test_expr(expr, expected_val):
+            env = create_env()
+            self.assertEqual(eval(parse(expr), env), expected_val)
+
+
+        # test keywords
+
+
+        test_expr("(defun (f x) (+ x 2))", None)
+        test_expr("(begin (defun (f x) (+ x 2)) (f 3))", 5)
 
     def test_eval(self):
-        self.assertEqual(eval(parse(self.test_string)), 3)
+        env = create_env()
+        self.assertEqual(eval(parse(self.test_string), env), 3)
 

@@ -41,8 +41,10 @@ def create_env():
         'list': lambda *a: list(a),
         'head': lambda a: a[0],
         'tail': lambda a: a[1:],
-        'empty_list': lambda l: l == [],
-        'apply': lambda func, args: func(*args)
+        'empty?': lambda l: l == [],
+        "count": lambda l: len(l),
+        'apply': lambda func, args: func(*args),
+        # "println": lambda string: print(string) # TODO : support strings
         }
     return Env([], [], dict=env)
 
