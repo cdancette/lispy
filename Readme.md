@@ -12,6 +12,7 @@ Supported keywords :
 - set!
 - run  : (run test.lisp) runs the file in the current environment
 - comments with syntax (* comment.. *)
+- (defun (f x) (expr)) : shortcut to (define f (lambda (x) (expr)))
 
 Other supported things : 
 - Closures : try `(define add (lambda (x) (lambda (y) (+ x y))))`

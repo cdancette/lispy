@@ -93,6 +93,12 @@ def eval(exp: Expression, env):
         parameters = exp[1]
         value = exp[2]
         return Lambda(parameters, value, env=env)
+    elif exp[0] == "defun":
+        func_and_args = exp[1]
+        expression = exp[2]
+        func = func_and_args[0]
+        args = func_and_args[1:]
+        env[func] = Lambda(args, expression, env=env)
     elif exp[0] == "run":
         file = exp[1]
         return run_file(file, env)
