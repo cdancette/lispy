@@ -13,5 +13,9 @@ Supported keywords :
 - run  : (run test.lisp) runs the file in the current environment
 - comments with syntax (* comment.. *)
 
+Other supported things : 
+- Closures : try `(define add (lambda (x) (lambda (y) (+ x y))))`
+
+
 TODO
 - 
