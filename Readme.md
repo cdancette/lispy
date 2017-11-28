@@ -19,4 +19,7 @@ Other supported things :
 
 
 TODO
-- 
+- remove the necessary "begin" that surrounds all code in a file
+- Read data stream
+- define function keyword (defun), or simplified (define f x (expr))
+

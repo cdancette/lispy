@@ -39,10 +39,12 @@ def create_env():
         '//': op.floordiv,
         '>':op.gt, '<':op.lt, '>=':op.ge, '<=':op.le, '=':op.eq,
         'list': lambda *a: list(a),
+        'head': lambda a: a[0],
+        'tail': lambda a: a[1:],
+        'empty_list': lambda l: l == [],
         'apply': lambda func, args: func(*args)
         }
     return Env([], [], dict=env)
-
 
 
 def run_file(file, env):
