@@ -2,6 +2,12 @@
 
 Inspired by Peter Norvig's Lispy [http://norvig.com/lispy.html](http://norvig.com/lispy.html)
 
+## Usage
+
+Run `main.py` to enter into the REPL.
+
+You can also run `main.py file.lisp` to run the `file.lisp` file. It will run it in the current environment. One current limitation for files is that you have to surround your lisp instructions with (begin expr1 expr2 ...)
+
 ## Features
 
 #Supported types :
