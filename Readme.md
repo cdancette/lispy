@@ -4,8 +4,8 @@ Inspired by Peter Norvig's Lispy [http://norvig.com/lispy.html](http://norvig.co
 
 Features :
 
-Only int and float supported for now
-
+Supported types : 
+integers, floats and booleans (#f, #t keywords)
 Supported keywords :
 - define
 - lambda
